@@ -1,2 +1,5 @@
+.gitignore
 scaffold.yaml
 auth/node_modules
+auth/.DS_Store
+auth/src/.DS_Store
