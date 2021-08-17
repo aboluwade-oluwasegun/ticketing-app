@@ -1,6 +1,6 @@
 import useRequest from '../../hooks/use-request';
 import { useEffect } from 'react';
-import { Router } from 'next/router';
+import Router from 'next/router';
 
 const signOut = () => {
   const { doRequest } = useRequest({

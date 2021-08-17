@@ -6,3 +6,4 @@ auth/src/.DS_Store
 client/node_modules
 client/.next
 skaffold.yaml
+common

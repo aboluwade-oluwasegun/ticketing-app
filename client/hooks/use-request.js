@@ -8,24 +8,25 @@ const useRequest = ({ url, method, body, onSuccess }) => {
     try {
       setErrors(null);
       const response = await axios[method](url, body);
-      console.log(response);
 
       if (onSuccess) {
         onSuccess(response.data);
       }
 
-      return response.data;
+      // return response.data;
     } catch (err) {
-      setErrors(
-        <div className="alert alert-danger">
-          <h4>Oooppss...</h4>
-          <ul className="my-0">
-            {err.response.data.errors.map((error) => (
-              <li key={error.message}>{error.message}</li>
-            ))}
-          </ul>
-        </div>
-      );
+      if (err) {
+        setErrors(
+          <div className="alert alert-danger">
+            <h4>Oooppss...</h4>
+            <ul className="my-0">
+              {err.response.data.errors.map((error) => (
+                <li key={error.message}>{error.message}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
     }
   };
 
