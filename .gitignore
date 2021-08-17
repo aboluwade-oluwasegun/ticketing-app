@@ -3,3 +3,6 @@ scaffold.yaml
 auth/node_modules
 auth/.DS_Store
 auth/src/.DS_Store
+client/node_modules
+client/.next
+skaffold.yaml

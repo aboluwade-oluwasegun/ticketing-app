@@ -8,9 +8,22 @@ build:
       context: auth
       docker:
         dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+    - image: oluwasegun7/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .
 deploy:
   kubectl:
     manifests:
       - infra/k8s/auth-depl.yaml
       - infra/k8s/ingress-srv.yaml
       - infra/k8s/auth-mongo-depl.yaml
+      - infra/k8s/client-depl.yaml
