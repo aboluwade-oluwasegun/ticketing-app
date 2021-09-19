@@ -7,3 +7,5 @@ client/node_modules
 client/.next
 skaffold.yaml
 common
+tickets/node_modules
+tickets/.DS_Store
