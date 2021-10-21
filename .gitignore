@@ -9,3 +9,6 @@ skaffold.yaml
 common
 tickets/node_modules
 tickets/.DS_Store
+nats-test
+orders/node_modules
+orders/.DS_Store
