@@ -37,7 +37,8 @@ router.put('/api/tickets/:id', requireAuth, [
             id: ticket.id,
             price: ticket.price,
             userId: ticket.userId,
-            title: ticket.title
+            title: ticket.title,
+            version: ticket.version
         })
     } catch (err) {
         throw err
