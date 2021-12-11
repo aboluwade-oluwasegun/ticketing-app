@@ -36,6 +36,14 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
+    - image: oluwasegun7/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
 deploy:
   kubectl:
     manifests:
@@ -48,3 +56,5 @@ deploy:
       - infra/k8s/nats-depl.yaml
       - infra/k8s/orders-depl.yaml
       - infra/k8s/orders-mongo-depl.yaml
+      - infra/k8s/expiration-depl.yaml
+      - infra/k8s/expiration-redis-depl.yaml

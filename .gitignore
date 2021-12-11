@@ -12,3 +12,5 @@ tickets/.DS_Store
 nats-test
 orders/node_modules
 orders/.DS_Store
+expiration/node_modules
+expiration/.DS_Store
